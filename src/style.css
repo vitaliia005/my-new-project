@@ -38,3 +38,9 @@
   width: 100px;
   text-align: center;
 }
+
+.link {
+  text-align: center;
+  display: block;
+  color: darkgrey;
+}
