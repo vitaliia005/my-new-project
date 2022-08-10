@@ -1,0 +1,40 @@
+.week {
+  padding: 50px 30px;
+  background-color: aliceblue;
+  background: rgba(224, 231, 224, 0.154);
+  border-radius: 20px;
+  border-color: aliceblue;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+}
+
+.today-temperature {
+  padding: 10px 50px;
+  margin-left: 30px;
+}
+
+.container {
+  padding-top: 70px;
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 20px;
+  background: url(../images/weather.jpg) turquoise;
+}
+
+.current-city {
+  width: 100%;
+  border-color: white;
+  border-width: 1px;
+}
+
+.card-body {
+  width: 100px;
+  text-align: center;
+}
+
+.card-body {
+  width: 100px;
+  text-align: center;
+}

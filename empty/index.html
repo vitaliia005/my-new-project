@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 today-temperature">
+                <h1 class="city"></h1>
+                <h2 class="today-date"></h2>
+                <h2 class="today-temp"></h2>
+            </div>
+
+            <div class="col-4 search">
+
+                <form class="city-form">
+                    <input type="button" value="Current location" class="btn btn-outline-light current-city" />
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded text-input" placeholder="Search for..." />
+                        <input type="submit" value="Search" class="btn btn-outline-light" />
+                    </div>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+
+        <div class="row week">
+            <div class="card-group">
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Mon</h5>
+                            <p class="card-text">18°
+                            </p>
+                            <p class="card-text">🌤</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Tue</h5>
+                            <p class="card-text">19°
+                            </p>
+                            <p class="card-text">🌤</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Wed</h5>
+                            <p class="card-text">21°
+                            </p>
+                            <p class="card-text">☀️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Thu</h5>
+                            <p class="card-text">25°
+                            </p>
+                            <p class="card-text">☀️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Fri</h5>
+                            <p class="card-text">26°
+                            </p>
+                            <p class="card-text">☀️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title">Sat</h5>
+                            <p class="card-text">24°
+                            </p>
+                            <p class="card-text">☀️</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>
