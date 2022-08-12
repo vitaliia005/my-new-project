@@ -9,9 +9,13 @@
   text-align: center;
 }
 
-.today-temperature {
-  padding: 10px 50px;
+.today-temperature,
+.city {
   margin-left: 30px;
+}
+
+.description:first-letter {
+  text-transform: uppercase;
 }
 
 .container {
@@ -20,18 +24,14 @@
   width: 100%;
   margin: 20px auto;
   border-radius: 20px;
-  background: url(../images/weather.jpg) turquoise;
+  /* background: url(../images/weather.jpg) rgb(214, 170, 206); */
+  background: rgb(214, 170, 206);
 }
 
 .current-city {
   width: 100%;
   border-color: white;
   border-width: 1px;
-}
-
-.card-body {
-  width: 100px;
-  text-align: center;
 }
 
 .card-body {

@@ -18,14 +18,22 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6 today-temperature">
-                <h1 class="city"></h1>
-                <h2 class="today-date"></h2>
-                <h2 class="today-temp"></h2>
+            <h1 class="city"></h1>
+            <div class="col-4 today-temperature">
+
+                <strong class="today-date"></strong>
+                <div class="float-left">
+                    <strong class="today-temp"></strong><span class="celsius">°C</span>|<span
+                        class="fahrenheit">°F</span>
+                </div>
+                <p class="description"></p>
             </div>
-
-            <div class="col-4 search">
-
+            <div class="col-2"><strong>Humidity: <span class="humidity"></span></strong> %
+                <strong>Pressure: <span class="pressure"></span></strong> hPa
+                <strong>Wind: <span class="wind"></span></strong> km/h
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3 search">
                 <form class="city-form">
                     <input type="button" value="Current location" class="btn btn-outline-light current-city" />
                     <div class="input-group">
@@ -34,7 +42,6 @@
                     </div>
                 </form>
             </div>
-            <div class="col-2"></div>
         </div>
 
 

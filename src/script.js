@@ -49,9 +49,16 @@ function showTemperature(response) {
     document.querySelector(".city").innerHTML = "Munich";
   }
   document.querySelector(".city").innerHTML = response.data.name;
-
   document.querySelector(".today-temp").innerHTML = Math.round(
     response.data.main.temp
+  );
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
+
+  document.querySelector(".humidity").innerHTML = response.data.main.humidity;
+  document.querySelector(".pressure").innerHTML = response.data.main.pressure;
+  document.querySelector(".wind").innerHTML = Math.round(
+    response.data.wind.speed
   );
 }
 
