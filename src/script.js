@@ -3,28 +3,28 @@ let apiKey = "ca62161fa9c037c12a181a9e71f2e8ab";
 let currentTime = new Date();
 
 let days = [
-  "sunday",
-  "monday",
-  "tuesday",
-  "wednesday",
-  "thursday",
-  "friday",
-  "saturday",
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
 let day = days[currentTime.getDay()];
 let months = [
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 let hour = currentTime.getHours();
 if (hour < 10) {
@@ -45,7 +45,11 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 function showTemperature(response) {
+  if (response.data.name === "Altstadt") {
+    document.querySelector(".city").innerHTML = "Munich";
+  }
   document.querySelector(".city").innerHTML = response.data.name;
+
   document.querySelector(".today-temp").innerHTML = Math.round(
     response.data.main.temp
   );
