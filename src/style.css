@@ -25,7 +25,7 @@
   margin: 20px auto;
   border-radius: 20px;
   /* background: url(../images/weather.jpg) rgb(214, 170, 206); */
-  background: rgb(214, 170, 206);
+  background: #e6b2c6;
 }
 
 .current-city {
