@@ -41,15 +41,29 @@
 
 .celsius,
 .fahrenheit {
-  color: black;
   text-decoration: none;
 }
 
 .link {
+  display: block;
   text-align: center;
   text-decoration: none;
+  color: #e6b2c6;
+}
+
+a {
+  color: rgb(226, 43, 159);
+}
+
+a:hover {
+  color: rgb(197, 117, 157);
+  transition: all 200ms ease;
 }
 
 .active {
-  color: rgb(217, 43, 226);
+  color: black;
+}
+
+.active:hover {
+  color: black;
 }
