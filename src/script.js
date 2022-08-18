@@ -90,14 +90,16 @@ function showFahrenheit(event) {
   document.querySelector(".today-temp").innerHTML = Math.round(
     fahrenheitTemperature
   );
-  console.log(document.querySelector(".today-temp").innerHTML);
-  console.log(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function showCelsius(event) {
   event.preventDefault();
   document.querySelector(".today-temp").innerHTML =
     Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 function getCurrentLocation(event) {
@@ -117,6 +119,6 @@ let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
 let celsiusLink = document.querySelector(".celsius");
-fahrenheitLink.addEventListener("click", showCelsius);
+celsiusLink.addEventListener("click", showCelsius);
 
 searchCity("Munich");

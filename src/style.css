@@ -39,8 +39,17 @@
   text-align: center;
 }
 
+.celsius,
+.fahrenheit {
+  color: black;
+  text-decoration: none;
+}
+
 .link {
   text-align: center;
-  display: block;
-  color: darkgrey;
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(217, 43, 226);
 }
