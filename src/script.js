@@ -135,10 +135,9 @@ function displayForecast(response) {
             <img src="http://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
             }@2x.png" alt="" class="icon">
-            <p class="card-text">Max:${Math.round(
+            <p class="card-text"> <strong>Max: </strong>${Math.round(
               forecastDay.temp.max
-            )}° Min:${Math.round(forecastDay.temp.min)}°</p>
-            <p class="card-text">🌤</p>
+            )}° <strong>Min: </strong>${Math.round(forecastDay.temp.min)}°</p>
           </div>
         </div>
       </div>  
