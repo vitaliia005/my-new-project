@@ -1,4 +1,4 @@
-let apiKey = "ca62161fa9c037c12a181a9e71f2e8ab";
+//b40b135798f82a05aed08769f9275f50
 
 let currentTime = new Date();
 
@@ -39,7 +39,17 @@ let date = currentTime.getDate();
 let newDate = document.querySelector(".today-date");
 newDate.innerHTML = `${day} <br> ${month}, ${date} ${hour}:${minute}`;
 
+function getForecast(coordinates) {
+  let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
 function searchCity(city) {
+  let apiKey = "f6b96cb42318daf27f140a4392bf519f";
+
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemperature);
@@ -69,6 +79,8 @@ function showTemperature(response) {
       "alt",
       `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
     );
+
+  getForecast(response.data.coord);
 }
 
 function handleSubmitButton(event) {
@@ -105,6 +117,44 @@ function showCelsius(event) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row week"> <div class="card-group">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 7 && index > 0) {
+      forecastHTML =
+        forecastHTML +
+        `          
+      <div class="col-2">
+        <div class="card-transparent">
+          <div class="card-body">
+            <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" alt="" class="icon">
+            <p class="card-text">Max:${Math.round(
+              forecastDay.temp.max
+            )}° Min:${Math.round(forecastDay.temp.min)}°</p>
+            <p class="card-text">🌤</p>
+          </div>
+        </div>
+      </div>  
+    `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div></div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+
+  return days[day];
 }
 
 let celsiusTemperature = null;
