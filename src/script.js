@@ -2,15 +2,7 @@
 
 let currentTime = new Date();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[currentTime.getDay()];
 let months = [
   "January",
@@ -37,7 +29,7 @@ if (minute < 10) {
 let month = months[currentTime.getMonth()];
 let date = currentTime.getDate();
 let newDate = document.querySelector(".today-date");
-newDate.innerHTML = `${day} <br> ${month}, ${date} ${hour}:${minute}`;
+newDate.innerHTML = `${month}, ${date} <br>${hour}:${minute}`;
 
 function getForecast(coordinates) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
