@@ -95,24 +95,24 @@ function showPosition(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+// function showFahrenheit(event) {
+//   event.preventDefault();
+//   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
-  document.querySelector(".today-temp").innerHTML = Math.round(
-    fahrenheitTemperature
-  );
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
+//   document.querySelector(".today-temp").innerHTML = Math.round(
+//     fahrenheitTemperature
+//   );
+//   celsiusLink.classList.remove("active");
+//   fahrenheitLink.classList.add("active");
+// }
 
-function showCelsius(event) {
-  event.preventDefault();
-  document.querySelector(".today-temp").innerHTML =
-    Math.round(celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
+// function showCelsius(event) {
+//   event.preventDefault();
+//   document.querySelector(".today-temp").innerHTML =
+//     Math.round(celsiusTemperature);
+//   celsiusLink.classList.add("active");
+//   fahrenheitLink.classList.remove("active");
+// }
 
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -156,7 +156,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-let celsiusTemperature = null;
+// let celsiusTemperature = null;
 
 let searchForm = document.querySelector(".city-form");
 searchForm.addEventListener("submit", handleSubmitButton);
@@ -164,10 +164,10 @@ searchForm.addEventListener("submit", handleSubmitButton);
 let currentCityButton = document.querySelector(".current-city");
 currentCityButton.addEventListener("click", getCurrentLocation);
 
-let fahrenheitLink = document.querySelector(".fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheit);
+// let fahrenheitLink = document.querySelector(".fahrenheit");
+// fahrenheitLink.addEventListener("click", showFahrenheit);
 
-let celsiusLink = document.querySelector(".celsius");
-celsiusLink.addEventListener("click", showCelsius);
+// let celsiusLink = document.querySelector(".celsius");
+// celsiusLink.addEventListener("click", showCelsius);
 
 searchCity("Munich");
